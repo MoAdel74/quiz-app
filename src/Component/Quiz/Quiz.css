@@ -1,0 +1,88 @@
+* {
+  user-select: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: #262626;
+  gap: 10px;
+  border-radius: 10px;
+  max-width: 650px;
+  padding: 40px 50px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.container hr {
+  height: 2px;
+  width: 100%;
+  border: none;
+  background-color: rgb(0, 0, 0);
+}
+.container h2 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  height: 60px;
+}
+ul li {
+  list-style: none;
+  padding: 10px;
+  border: 2px solid rgba(103, 100, 100, 0.466);
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #19006c;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.disabled {
+  background-color: grey !important;
+  cursor: not-allowed !important;
+}
+
+@keyframes color-blink {
+  0%,
+  100% {
+    background-color: rgb(169, 253, 157);
+  }
+  50% {
+    background-color: white;
+  }
+}
+.container .selected {
+  animation: color-blink 1s linear infinite;
+}
+@media (max-width: 700px) {
+  .container {
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .container h2 {
+    font-size: 20px;
+    height: auto;
+  }
+  ul li {
+    width: 200px;
+  }
+}
+@media (max-width: 235px) {
+  ul li {
+    width: 140px;
+  }
+}
